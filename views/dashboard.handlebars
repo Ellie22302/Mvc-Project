@@ -1,0 +1,12 @@
+<div class="blogPosts list-group">
+  <a href="/dashboard/new" class="list-group-item list-group-item-action">
+    <button type="button" class="btn btn-primary">Add New Post</button>
+  </a>
+  
+  {{#each blogPosts}}
+  <a href="/dashboard/edit/{{id}}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+    <span>{{title}}</span>
+    <span>{{formatDate createdAt}}</span>
+  </a>
+  {{/each}}
+</div>
